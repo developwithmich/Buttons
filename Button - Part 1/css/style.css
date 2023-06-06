@@ -1,0 +1,94 @@
+body{
+    background-image: url(../img/background.svg);
+}
+
+div {
+    padding-top: 250px;
+    padding-left: 50px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 15px;
+    grid-template-areas: 
+    'pinka shadow animated';
+}
+.pink-button {
+    grid-area: pinka;
+    background-color: #FBB8E3;
+    border: solid 1px black;
+    border-radius: 6px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.pink-button:hover {
+    background-color: black;
+    border: solid 1px #FBB8E3;
+    color: white;
+}
+
+.shadow-button {
+    grid-area: shadow;
+    background-color: #505CFC;
+    border: solid 1px black;
+    width: 200px;
+    color: white;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.shadow-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 
+    0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.animated-button {
+    grid-area: animated;
+    background-color: #FFEA39;
+    border: solid 1px black;
+    border-radius: 6px;
+    width: 200px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 10px;
+    transition: all 0.5s;
+}
+
+.animated-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.animated-button span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.animated-button:hover span{
+    padding-right: 35px;
+}
+
+.animated-button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+
+
